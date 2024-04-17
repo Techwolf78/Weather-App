@@ -65,7 +65,7 @@ const SearchComponent = (props) => {
                     onChange={(e) => updateCity(e.target.value)}
                 />
                 <button type={"submit"}>
-                    <img src={"/icons/search.svg"} alt={"search"} />
+                    <img src={"/weather/icons/search.svg"} alt={"search"} />
                 </button>
             </SearchBox>
         </>

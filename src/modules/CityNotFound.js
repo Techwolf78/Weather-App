@@ -37,7 +37,7 @@ const CityNotFound = () => {
     return (
         <Container>
             <AppLabel>
-                <img src={'/icons/city-notfound.svg'} alt="City Not Found" />
+                <img src={'/weather/icons/city-notfound.svg'} alt="City Not Found" />
                 <span>City Not Found</span>
                 </AppLabel>
         </Container>
