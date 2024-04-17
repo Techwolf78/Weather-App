@@ -28,7 +28,8 @@ const Container = styled.div`
   align-items: center;
   padding: 20px;
   border-radius: 4px;
-  width: 340px;
+  width: 100%;
+  max-width: 320px;
   font-family: Montserrat;
 `;
 
