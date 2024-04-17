@@ -2,7 +2,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 20px;
   height: 100vh;
   background: linear-gradient(#7CB9E8, #b1d8eb);
   overflow: hidden;

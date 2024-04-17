@@ -26,17 +26,17 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px;
   border-radius: 4px;
-  width: 380px;
+  width: 340px;
   font-family: Montserrat;
 `;
 
 const AppLabel = styled.span`
-  font-size: 42px;
+  font-size: 38px;
   color: solid black;
   font-weight: bolder;
-  margin: 20px 25px 10px;
+  margin: 5px 25px 10px;
   text-align: center;
   width: 90%;
 `;
