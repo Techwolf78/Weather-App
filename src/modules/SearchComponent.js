@@ -1,16 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const WeatherLogo = styled.img`
-    width: 140px;
-    height: 140px;
-    margin: 40px auto;
-`;
-const ChooseCitylabel = styled.span`
-    fonst-size: 18px;
-    font-weight: bold;
-`;
-
 const SearchBox = styled.form`
     display: flex;
     flex-direction: row;
