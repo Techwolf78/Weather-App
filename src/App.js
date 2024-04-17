@@ -33,7 +33,7 @@ const Container = styled.div`
 `;
 
 const AppLabel = styled.span`
-  font-size: 28px;
+  font-size: 42px;
   color: solid black;
   font-weight: bolder;
   margin: 20px 25px 10px;
