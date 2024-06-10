@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import styled from 'styled-components';
-import CityNotFound from './modules/CityNotFound';
-import SearchComponent from './modules/SearchComponent';
-import WeatherComponent from './modules/WeatherComponent';
+import React, { useState } from "react";
+import axios from "axios";
+import styled from "styled-components";
+import CityNotFound from "./modules/CityNotFound";
+import SearchComponent from "./modules/SearchComponent";
+import WeatherComponent from "./modules/WeatherComponent";
+import VideoBackground from "./modules/VideoBackground.js";
 
 export const WeatherIcons = {
   "01d": "/weather/icons/sunny.svg",
@@ -49,29 +50,43 @@ function App() {
 
   const fetchWeather = async (e) => {
     e.preventDefault();
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=fe4feefa8543e06d4f3c66d92c61b69c`)
-    .then((res) => {
-      updateWeather(res.data);
-      updateCityFound(true);
-    })
-    .catch((err) => {
-      updateCityFound(false);
-    });
-};
+    axios
+      .get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=fe4feefa8543e06d4f3c66d92c61b69c`
+      )
+      .then((res) => {
+        updateWeather(res.data);
+        updateCityFound(true);
+      })
+      .catch((err) => {
+        updateCityFound(false);
+      });
+  };
 
   return (
-    <Container>
-      <AppLabel><span>Weather App</span></AppLabel>
-      {weather && cityFound ? (
-        <React.Fragment>
-          <SearchComponent updateCity={updateCity} fetchWeather={fetchWeather} />
-          <WeatherComponent weather={weather} city={city} />
-        </React.Fragment>
-      ) : (
-        <SearchComponent updateCity={updateCity} fetchWeather={fetchWeather} />
-      )}
-      {cityFound ? null : <CityNotFound />}
-    </Container>
+    <div>
+      <VideoBackground />
+      <Container>
+        <AppLabel>
+          <span>Weather App</span>
+        </AppLabel>
+        {weather && cityFound ? (
+          <React.Fragment>
+            <SearchComponent
+              updateCity={updateCity}
+              fetchWeather={fetchWeather}
+            />
+            <WeatherComponent weather={weather} city={city} />
+          </React.Fragment>
+        ) : (
+          <SearchComponent
+            updateCity={updateCity}
+            fetchWeather={fetchWeather}
+          />
+        )}
+        {cityFound ? null : <CityNotFound />}
+      </Container>
+    </div>
   );
 }
 
