@@ -1,4 +1,3 @@
-// src/VideoBackground.js
 import React from "react";
 import "./VideoBackground.css";
 
